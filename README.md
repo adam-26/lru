@@ -3,18 +3,19 @@
 **A simple LRU cache supporting O(1) set, get and eviction of old keys**
 
 This is a *fork* from https://github.com/chriso/lru
+
 ** This version supports legacy browsers such as IE 8 **
 
 ## Installation
 
 ```bash
-$ npm install lru
+$ npm install @adam-26/lru-legacy
 ```
 
 ### Example
 
 ```javascript
-var LRU = require('lru');
+var LRU = require('@adam-26/lru-legacy');
 
 var cache = new LRU(2),
     evicted
