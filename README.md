@@ -2,6 +2,9 @@
 
 **A simple LRU cache supporting O(1) set, get and eviction of old keys**
 
+This is a *fork* from https://github.com/chriso/lru
+** This version supports legacy browsers such as IE 8 **
+
 ## Installation
 
 ```bash

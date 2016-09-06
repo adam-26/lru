@@ -17,9 +17,9 @@ function LRU (opts) {
 
 inherits(LRU, events.EventEmitter)
 
-Object.defineProperty(LRU.prototype, 'keys', {
-  get: function () { return Object.keys(this.cache) }
-})
+LRU.prototype.getKeys = function () {
+  return Object.keys(this.cache)
+}
 
 LRU.prototype.clear = function () {
   this.cache = {}

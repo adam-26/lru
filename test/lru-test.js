@@ -55,7 +55,7 @@ suite.addBatch({
     lru.set('foo3', 'bar3')
     lru.set('foo4', 'bar4')
 
-    assert.deepEqual(['foo3', 'foo4'], lru.keys)
+    assert.deepEqual(['foo3', 'foo4'], lru.getKeys())
   }
 })
 
@@ -80,7 +80,7 @@ suite.addBatch({
 
     lru.set('foo3', 'bar3')
 
-    assert.deepEqual(['foo1', 'foo3'], lru.keys)
+    assert.deepEqual(['foo1', 'foo3'], lru.getKeys())
   },
   'lru invariant is maintained after set(), get() and remove()': function () {
     var lru = new LRU(2)
@@ -90,7 +90,7 @@ suite.addBatch({
     lru.remove('a')
     lru.set('c', 1)
     lru.set('d', 1)
-    assert.deepEqual(['c', 'd'], lru.keys)
+    assert.deepEqual(['c', 'd'], lru.getKeys())
   }
 })
 
@@ -105,7 +105,7 @@ suite.addBatch({
 
     lru.set('foo3', 'bar3')
 
-    assert.deepEqual(['foo3'], lru.keys)
+    assert.deepEqual(['foo3'], lru.getKeys())
   }
 })
 

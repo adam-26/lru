@@ -1,16 +1,15 @@
 {
-  "name": "lru",
+  "name": "@adam-26/lru-legacy",
   "description": "A simple O(1) LRU cache",
-  "version": "3.1.0",
   "author": "Chris O'Hara <cohara87@gmail.com>",
   "main": "index",
-  "homepage": "http://github.com/chriso/lru",
+  "homepage": "http://github.com/adam-26/lru",
   "repository": {
     "type": "git",
-    "url": "http://github.com/chriso/lru.git"
+    "url": "https://github.com/adam-26/lru.git"
   },
   "bugs": {
-    "url": "http://github.com/chriso/lru/issues"
+    "url": "http://github.com/adam-26/lru/issues"
   },
   "engines": {
     "node": ">= 0.4.0"
@@ -18,10 +17,12 @@
   "license": "MIT",
   "devDependencies": {
     "standard": "^6.0.8",
-    "vows": "^0.8.1"
+    "vows": "^0.8.1",
+    "semantic-release": "^4.3.5"
   },
   "scripts": {
-    "test": "standard && vows test/*.js --spec"
+    "test": "standard && vows test/*.js --spec",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "dependencies": {
     "inherits": "^2.0.1"
